@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 
 # Underlying parameters
 S0 = 2600
-r = 0.01875
-q = 0.018
+r = 0.01875 # LIBOR 1 month rate
+q = 0.018 # Estimation gathered on internet
 T = 1/12
 
 
@@ -27,12 +27,12 @@ def zero_function(sigma, K, price):
     return price_BS(sigma, K) - price
 
 # Retrieving option prices
-option_prices = pd.read_json("S&P500.json")
+option_prices = pd.read_json("option_prices.json")
 option_prices = option_prices.set_index('strike')
 
 
 # Retrieving the historical annualized volatility
-hist_prices = pd.read_json("hist_S&P500.json",orient='records')
+hist_prices = pd.read_json("hist_prices.json",orient='records')
 hist_prices = hist_prices.set_index('date')
 hist_prices = hist_prices.pct_change()
 hist_sigma = float(hist_prices.std())*np.sqrt(252)
@@ -42,10 +42,15 @@ hist_sigma = float(hist_prices.std())*np.sqrt(252)
 strikes = option_prices.index
 volatilities = np.zeros(len(strikes))
 
+
+# Computing the implied volatility with the Newton-Rampshon method
 for i, strike in enumerate(strikes):
     price = float(option_prices.loc[[strike]]['price'])
     volatilities[i] = newton(zero_function,hist_sigma,args=(strike, price))
 
-print(S0*np.exp(r*T))
+
+# Plotting the result
 plt.plot(strikes, volatilities)
+plt.xlabel('Strike prices')
+plt.ylabel('Implied volatility')
 plt.show()

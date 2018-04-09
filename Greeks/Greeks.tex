@@ -237,6 +237,16 @@
 	
 	\begin{figure}[!h]
 	\centering
+	
+	\includegraphics[width=0.7\textwidth]{delta_2d.png}
+	
+	\caption{Delta in 2D}
+	\label{fig:delta2d}
+	\end{figure}
+	
+	
+	\begin{figure}[!h]
+	\centering
 	\caption{Delta surfaces}
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{delta_call.png}
@@ -251,7 +261,7 @@
   \end{subfigure}
 \end{figure}
 
-Figures \ref{fig:delta_call} and \ref{fig:delta_put} represent the delta for a call and a put. We can see that the delta of a put is just a translation of the delta of a call. We have the two following properties :
+Figures \ref{fig:delta_call} and \ref{fig:delta_put} represent the delta for a call and a put in 3D and figure \ref{fig:delta2d} represent the same in 2D. We can see that the delta of a put is just a translation of the delta of a call. We have the two following properties :
 $$ \Delta_{call} \in [0,1] \quad \quad \Delta_{put} \in [-1,0]$$
 
 It is interesting to note that the delta is much steeper when the time to maturity is low, which means that when an option is at the money with a very short maturity, a little change in the underlying price would bring an import change in the delta (this is the gamma). Therefore performing delta hedging with an ATM option with short maturity is very challenging since the delta is constantly having important variations.
@@ -266,6 +276,15 @@ When explaining the delta we gave a solution for performing a delta hedging : ta
 	As we already discused in the section about delta, the delta only have important variation when the maturity is short and when the strike price is close to the spot price we could therefore anticipate the shape of the gamma in figure \ref{fig:gamma} and we can conclude that gamma hedging is only relevant for ATM options with relatively short maturity. 
 	
 	The gamma of a long position in a call or a put will always be non-negative and the gamma of a short position in a call or a put will always be negative.
+	
+	\begin{figure}[!h]
+	\centering
+	
+	\includegraphics[width=0.7\textwidth]{gamma_2d.png}
+	
+	\caption{Gamma in 2D}
+	\label{fig:gamma2d}
+	\end{figure}
 	
 	\begin{figure}[!h]
 	\centering
@@ -298,6 +317,17 @@ When explaining the delta we gave a solution for performing a delta hedging : ta
     $$\nu =\frac{\partial c}{\partial \sigma} =\frac{\partial p}{\partial \sigma}= S_0 \sqrt{T} N'(d_1)$$
     
     Figure \ref{fig:vega} show the vega surface for calls and puts. The important feature is to keep in minde that the vega is an increasing function of time to maturity.
+    
+    \begin{figure}[!h]
+	\centering
+	
+	\includegraphics[width=0.7\textwidth]{vega_2d.png}
+	
+	\caption{Vega in 2D}
+	\label{fig:vega2d}
+	\end{figure}
+    
+    
     \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{vega.png}
@@ -309,6 +339,7 @@ When explaining the delta we gave a solution for performing a delta hedging : ta
     
     When an exotic product has a complexe sensitivity with respect to the volatility, the shape of vega could have different shapes along the term structure, those differents local shapes are call vega buckets.
     
+    \newpage
     \subsection{Volga}
     The volga or vega-gamma (or Vomma) is the second derivative of the option price with respect to volatility (or the derivative of the vega with respect to volatility). It allow one to take in account the convexity of the option price with respect to volatility.
     
@@ -325,6 +356,15 @@ When explaining the delta we gave a solution for performing a delta hedging : ta
     
     \begin{figure}[!h]
 	\centering
+	
+	\includegraphics[width=0.7\textwidth]{theta_2d.png}
+	
+	\caption{Theta in 2D}
+	\label{fig:theta2d}
+	\end{figure}
+    
+    \begin{figure}
+	\centering
 	\caption{Theta surfaces}
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{theta_call.png}
@@ -339,14 +379,24 @@ When explaining the delta we gave a solution for performing a delta hedging : ta
   \end{subfigure}
 \end{figure}
 
-
-    \newpage
+\clearpage
     \subsection{Rho}
     
     The rho is the sensibility of the option price to variations in interest rates. A higher interest rates means that the expected value of the underlying price price will be higher (the drift of the stochastic process modeling the price is more important). Therefore a rise in interest rates is a good think for a long position in a call but a bad thing for a long position in a put and we can expect the rho of a call to be non-negative and the rho of a put to be negative.  One can show that the analytic formula for rho is given by :
     
     $$Rho_{call} = \frac{\partial c}{\partial r} = KTe^{-rT}N(d_2)$$
     $$Rho_{put} = \frac{\partial p}{\partial r} = -KTe^{-rT}N(-d_2)$$
+    
+    \begin{figure}[!h]
+	\centering
+	
+	\includegraphics[width=0.7\textwidth]{rho_2d.png}
+	
+	\caption{Rho in 2D}
+	\label{fig:rho2d}
+	\end{figure}
+    
+    
     \begin{figure}[!h]
 	\centering
 	\caption{Rho surfaces}
@@ -362,6 +412,28 @@ When explaining the delta we gave a solution for performing a delta hedging : ta
     \label{fig:rho_put}
   \end{subfigure}
 \end{figure}
+
+
+\newpage
+\subsection{Omega}
+The delta give us an information about a rise of 1\$ in the underlying asset, but we do not have the information in percentages. This is the goal of omega, or option elasticity. The option elasticity is then defined by the delta of the option times the ratio between the underlying price and the option price $f$ :
+$$\Omega = \Delta \frac{S}{f} $$
+
+For a call, we will always have $\Omega \geq 1$ and for a put : $\Omega \leq 0$. Figure \ref{fig:omega}, shows the elasticity for a call option with parameters $K=40$, $\sigma = 0.3$ and $r=0.08$ :
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{omega.png}
+    \caption{Omega of a call option}
+    \label{fig:omega}
+    \end{figure}
+    
+    It is important to understand that the Omega is a measure of the implicit leverage of the option, it is thus an interesting risk metric, in order to monitor the implicit leverage of the option over its life. 
+    
+    The more an option is OTM, the more important the implicite leverage will be. Thus for a call, the omega is an increasing function of the strike and for a put it is a decreasing function of the strike.
+    
+    The more an option is ITM, the more the option is likely to be exercized and thus the more the option looks like the underlying itself.  It is then logical to find that when an option tends to be deep ITM, the omega tends to be close to 1 since the underlying has an implicit leverage of 1.
+    
 
 \newpage
 \section{Numerical methods for greeks}

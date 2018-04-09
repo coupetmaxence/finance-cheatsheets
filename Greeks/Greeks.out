@@ -6,8 +6,9 @@
 \BOOKMARK [2][-]{subsection.1.5}{Volga}{section.1}% 6
 \BOOKMARK [2][-]{subsection.1.6}{Theta}{section.1}% 7
 \BOOKMARK [2][-]{subsection.1.7}{Rho}{section.1}% 8
-\BOOKMARK [1][-]{section.2}{Numerical\040methods\040for\040greeks}{}% 9
-\BOOKMARK [2][-]{subsection.2.1}{Binomial\040tree}{section.2}% 10
-\BOOKMARK [2][-]{subsection.2.2}{Monte-Carlo\040simulation}{section.2}% 11
-\BOOKMARK [1][-]{appendix.A}{Greeks\040computation\040with\040binomial\040tree\040method}{}% 12
-\BOOKMARK [1][-]{appendix.B}{Greeks\040computation\040with\040Monte-Carlo\040method}{}% 13
+\BOOKMARK [2][-]{subsection.1.8}{Omega}{section.1}% 9
+\BOOKMARK [1][-]{section.2}{Numerical\040methods\040for\040greeks}{}% 10
+\BOOKMARK [2][-]{subsection.2.1}{Binomial\040tree}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.2}{Monte-Carlo\040simulation}{section.2}% 12
+\BOOKMARK [1][-]{appendix.A}{Greeks\040computation\040with\040binomial\040tree\040method}{}% 13
+\BOOKMARK [1][-]{appendix.B}{Greeks\040computation\040with\040Monte-Carlo\040method}{}% 14
