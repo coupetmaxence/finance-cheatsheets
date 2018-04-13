@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.2.15)  29 MAR 2018 15:57
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.2.15)  9 APR 2018 15:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1811,18 +1811,13 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [2]
 LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/bx/n' will be
-(Font)              scaled to size 10.0pt on input line 241.
-
-
-LaTeX Warning: Reference `fig:skew_term_structure' on page 3 undefined on input
- line 241.
-
+(Font)              scaled to size 10.0pt on input line 247.
 File: skew.png Graphic file (type bmp)
 <skew.png>
 LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/m/sc' will be
 (Font)              scaled to size 10.0pt on input line 256.
 Missing character: There is no ; in font nullfont!
-[3]
+ [3]
 File: skew_density.png Graphic file (type bmp)
 <skew_density.png>
 
@@ -1865,6 +1860,10 @@ Missing character: There is no ; in font nullfont!
  [9]
 Missing character: There is no ; in font nullfont!
  [10]
+File: term_structure.png Graphic file (type bmp)
+<term_structure.png>
+File: vol_surface.jpg Graphic file (type bmp)
+<vol_surface.jpg>
 Missing character: There is no ; in font nullfont!
  [11]
 File: SP500_iv.png Graphic file (type bmp)
@@ -1874,7 +1873,7 @@ File: SP500_iv.png Graphic file (type bmp)
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 373.
+(Font)              scaled to size 8.0pt on input line 400.
 
 (./implied_volatility.py
 LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/m/n' will be
@@ -1901,25 +1900,22 @@ LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/m/n' will be
 )
 Missing character: There is no ; in font nullfont!
  [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 374.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 374.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 401.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 401.
  (./implied volatility.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 374.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 374.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 401.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 401.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  )
 (\end occurred when \ifx on line 161 was incomplete) 
 Here is how much of TeX's memory you used:
- 39268 strings out of 493005
- 738573 string characters out of 6137947
- 1118034 words of memory out of 5000000
- 42681 multiletter control sequences out of 15000+600000
+ 39278 strings out of 493005
+ 738733 string characters out of 6137947
+ 1118347 words of memory out of 5000000
+ 42688 multiletter control sequences out of 15000+600000
  539982 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  55i,12n,84p,10452b,2591s stack positions out of 5000i,500n,10000p,200000b,80000s

@@ -238,7 +238,7 @@ So the approximation of pricing is exactly the same for calls and puts.
 
 \newpage
 \section{Volatility surface}
-One interesting property of implied volatility, is something that the Black-Scholes model does not predict : the implied volatility has different values across strikes and also across maturities, as we can see in figures \ref{fig:skew} and \ref{fig:skew_term_structure}.
+One interesting property of implied volatility, is something that the Black-Scholes model does not predict : the implied volatility has different values across strikes and also across maturities, as we can see in figures \ref{fig:skew} and \ref{fig:term}.
 
  When we fix the maturity of the option, and look at different values of implied volatility for different strikes, we are getting the volatility skew (or smile). When we fix the strike price (usually to the spot), and look at different values of implied volatility for different maturities, we are getting the volatility term structure. When we fix neither the strike nor the maturity, we are getting a 2D plotting of the volatility, called the volatility surface.
  
@@ -349,9 +349,36 @@ As of now, we will not use explicit value for the strike of an option, but rathe
    Let's assume that one thinks that the skew's convexity will increase in the future, thus he wishes to be long the skew's convexity. This could be done by entering a long butterfly spread. Indeed, if we long a 90\%-100\%-110\% butterfly spread, which means that we long one 90\% call, we short two 100\% call and finally long one 110\% call, an increase in the skew's convexity will increase the volatility of both 90\% and 110\% strikes but will decrease the value of the 100\% strike, which will increase the value of our long butterfly spread.
    
    Another interesting property of the skew's convexity is for equities : the skew's convexity of an index is lower that the one of a single stock. This is because an important moove in volatility will have more impact on a single that on a index, since the index is (partially) diversified.
+   
+   
    \newpage
    \subsection{Volatility term structure}
    
+   To observe the volatility term structure we have to fix a strike. In most cases, when the market is quite calm, the volatility term structure will be an increasing function of maturity, which means that for a longer maturity, the volatility will be higher. But when the market variations are exeptionnally high on the spot, it will most likely be a decreasing function of maturity, meaning that shorter maturities will have a higher volatility.
+   
+   The shape of the volatility term structure is a consequence of the mean-reversal charactiristic of implied volatility.
+   
+   One can trade the volatility term structure by entiring a combinaison of options with different maturities such as a calendar spread.
+   
+   \begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{term_structure.png}
+    \caption{Different shapes of term structure}
+    \label{fig:term}
+    \end{figure}
+    
+   
+    
+    As we can see on figure \ref{fig:term}, no matter the shape of the term structure, the skew is steeper for short term maturities, meaning that the skew value can change a lot for short term maturities.
+    
+    Finally, when we gather both volatility skew and term structure, we have the valatility surface. An example is shown in figure \ref{fig:surface}.
+    
+     \begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{vol_surface.jpg}
+    \caption{Implied volatility surface}
+    \label{fig:surface}
+    \end{figure}
    \newpage
 \appendix
 \section{Computation of implied volatility}
