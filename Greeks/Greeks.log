@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.2.15)  9 APR 2018 10:57
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.2.15)  5 MAY 2018 10:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1738,84 +1738,96 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 ) [1
 
 ]
+LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 188.
+LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/bx/n' will be
+(Font)              scaled to size 14.4pt on input line 188.
+
+(./Greeks.toc
+LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/bx/n' will be
+(Font)              scaled to size 10.0pt on input line 3.
 Package microtype Info: Character `\AE ' is missing
 (microtype)             in font `\TU/LucidaBrightMathOT(1)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/LucidaBrightMathOT(1)/m/n' will be
-(Font)              scaled to size 7.01236pt on input line 198.
+(Font)              scaled to size 7.01236pt on input line 4.
 Package microtype Info: Character `\AE ' is missing
 (microtype)             in font `\TU/LucidaBrightMathOT(1)/m/n/7.01236'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/LucidaBrightMathOT(1)/m/n' will be
-(Font)              scaled to size 4.98074pt on input line 198.
+(Font)              scaled to size 4.98074pt on input line 4.
 Package microtype Info: Character `\AE ' is missing
 (microtype)             in font `\TU/LucidaBrightMathOT(1)/m/n/4.98074'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/LucidaBrightMathOT(2)/m/n' will be
-(Font)              scaled to size 10.00015pt on input line 198.
+(Font)              scaled to size 10.00015pt on input line 4.
 Package microtype Info: Character `\AE ' is missing
 (microtype)             in font `\TU/LucidaBrightMathOT(2)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/LucidaBrightMathOT(2)/m/n' will be
-(Font)              scaled to size 7.01247pt on input line 198.
+(Font)              scaled to size 7.01247pt on input line 4.
 Package microtype Info: Character `\AE ' is missing
 (microtype)             in font `\TU/LucidaBrightMathOT(2)/m/n/7.01236'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/LucidaBrightMathOT(2)/m/n' will be
-(Font)              scaled to size 4.9808pt on input line 198.
+(Font)              scaled to size 4.9808pt on input line 4.
 Package microtype Info: Character `\AE ' is missing
 (microtype)             in font `\TU/LucidaBrightMathOT(2)/m/n/4.98074'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/LucidaBrightMathOT(3)/m/n' will be
-(Font)              scaled to size 9.99985pt on input line 198.
+(Font)              scaled to size 9.99985pt on input line 4.
 Package microtype Info: Character `\AE ' is missing
 (microtype)             in font `\TU/LucidaBrightMathOT(3)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/LucidaBrightMathOT(3)/m/n' will be
-(Font)              scaled to size 7.01224pt on input line 198.
+(Font)              scaled to size 7.01224pt on input line 4.
 Package microtype Info: Character `\AE ' is missing
 (microtype)             in font `\TU/LucidaBrightMathOT(3)/m/n/7.01236'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/LucidaBrightMathOT(3)/m/n' will be
-(Font)              scaled to size 4.98067pt on input line 198.
+(Font)              scaled to size 4.98067pt on input line 4.
 Package microtype Info: Character `\AE ' is missing
 (microtype)             in font `\TU/LucidaBrightMathOT(3)/m/n/4.98074'.
 (microtype)             Ignoring protrusion settings for this character.
+)
+\tf@toc=\write5
+\openout5 = `Greeks.toc'.
+
+Missing character: There is no ; in font nullfont!
+ [2]
 File: premium_call.png Graphic file (type bmp)
 <premium_call.png>
 LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/m/sc' will be
-(Font)              scaled to size 10.0pt on input line 210.
+(Font)              scaled to size 10.0pt on input line 217.
 Missing character: There is no ; in font nullfont!
-
-[1]
+ [1]
 File: premium_put.png Graphic file (type bmp)
 <premium_put.png>
 Missing character: There is no ; in font nullfont!
  [2]
-LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 228.
 LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/bx/n' will be
-(Font)              scaled to size 14.4pt on input line 228.
-LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/bx/n' will be
-(Font)              scaled to size 12.0pt on input line 230.
+(Font)              scaled to size 12.0pt on input line 239.
 File: delta_2d.png Graphic file (type bmp)
 <delta_2d.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: delta_call.png Graphic file (type bmp)
 <delta_call.png>
 LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 253.
+(Font)              scaled to size 9.0pt on input line 262.
 File: delta_put.png Graphic file (type bmp)
 <delta_put.png>
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Missing character: There is no ; in font nullfont!
 [3]
-LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/bx/n' will be
-(Font)              scaled to size 10.0pt on input line 269.
 Missing character: There is no ; in font nullfont!
  [4]
+Missing character: There is no ; in font nullfont!
+ [5]
 File: gamma_2d.png Graphic file (type bmp)
 <gamma_2d.png>
 File: gamma_call.png Graphic file (type bmp)
@@ -1825,19 +1837,19 @@ File: gamma_call.png Graphic file (type bmp)
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Missing character: There is no ; in font nullfont!
-[5]
+[6]
 Missing character: There is no ; in font nullfont!
- [6]
+ [7]
 File: shadow_gamma.png Graphic file (type bmp)
 <shadow_gamma.png>
 
-Overfull \hbox (5.0234pt too wide) in paragraph at lines 303--310
+Overfull \hbox (5.0234pt too wide) in paragraph at lines 312--319
 []\TU/LucidaBrightOT(0)/m/n/10 Nassim Taleb is the one that popularized the not
 ion of shadow gamma.
  []
 
 Missing character: There is no ; in font nullfont!
-[7]
+[8]
 File: vega_2d.png Graphic file (type bmp)
 <vega_2d.png>
 File: vega.png Graphic file (type bmp)
@@ -1847,11 +1859,11 @@ File: vega.png Graphic file (type bmp)
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Missing character: There is no ; in font nullfont!
-[8]
-Missing character: There is no ; in font nullfont!
- [9]
+[9]
 Missing character: There is no ; in font nullfont!
  [10]
+Missing character: There is no ; in font nullfont!
+ [11]
 File: theta_2d.png Graphic file (type bmp)
 <theta_2d.png>
 File: theta_call.png Graphic file (type bmp)
@@ -1859,9 +1871,9 @@ File: theta_call.png Graphic file (type bmp)
 File: theta_put.png Graphic file (type bmp)
 <theta_put.png>
 Missing character: There is no ; in font nullfont!
- [11]
-Missing character: There is no ; in font nullfont!
  [12]
+Missing character: There is no ; in font nullfont!
+ [13]
 File: rho_2d.png Graphic file (type bmp)
 <rho_2d.png>
 File: rho_call.png Graphic file (type bmp)
@@ -1869,33 +1881,39 @@ File: rho_call.png Graphic file (type bmp)
 File: rho_put.png Graphic file (type bmp)
 <rho_put.png>
 Missing character: There is no ; in font nullfont!
- [13
+ [14
 
 ]
 File: omega.png Graphic file (type bmp)
 <omega.png>
 Missing character: There is no ; in font nullfont!
- [14]
+ [15]
+LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/m/n' will be
+(Font)              scaled to size 7.01236pt on input line 469.
+LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/m/n' will be
+(Font)              scaled to size 4.98074pt on input line 469.
+Missing character: There is no ; in font nullfont!
+ [16]
 File: binom_tree.png Graphic file (type bmp)
 <binom_tree.png>
 Missing character: There is no ; in font nullfont!
- [15]
-Underfull \hbox (badness 10000) in paragraph at lines 469--471
+ [17]
+Underfull \hbox (badness 10000) in paragraph at lines 504--506
 
  []
 
 Missing character: There is no ; in font nullfont!
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 489--491
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 524--526
 
  []
 
 Missing character: There is no ; in font nullfont!
-[17] (c:/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
+[19] (c:/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 508.
+(Font)              scaled to size 8.0pt on input line 543.
 
 (./greeks_binomial_method.py
 LaTeX Font Info:    Font shape `TU/LucidaBrightOT(0)/m/n' will be
@@ -1918,37 +1936,37 @@ Package microtype Info: Character `\AE ' is missing
 (microtype)             in font `\TU/LucidaBrightMathOT(3)/m/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
 Missing character: There is no ; in font nullfont!
- [18]
-Missing character: There is no ; in font nullfont!
- [19])
-Missing character: There is no ; in font nullfont!
  [20]
-Overfull \hbox (8.1455pt too wide) in paragraph at lines 510--510
+Missing character: There is no ; in font nullfont!
+ [21])
+Missing character: There is no ; in font nullfont!
+ [22]
+Overfull \hbox (8.1455pt too wide) in paragraph at lines 545--545
 []\TU/LucidaBrightOT(0)/bx/n/14.4 Greeks computation with Monte-Carlo method 
  []
 
 (./greeks_monte_carlo_method.py
 Missing character: There is no ; in font nullfont!
- [21])
+ [23])
 Missing character: There is no ; in font nullfont!
- [22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 513.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 513.
+ [24]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 548.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 548.
  (./Greeks.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 513.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 513.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 548.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 548.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 40211 strings out of 493005
- 756174 string characters out of 6137947
- 1202580 words of memory out of 5000000
- 43625 multiletter control sequences out of 15000+600000
- 539974 words of font info for 88 fonts, out of 8000000 for 9000
+ 40233 strings out of 493005
+ 756753 string characters out of 6137947
+ 1202776 words of memory out of 5000000
+ 43642 multiletter control sequences out of 15000+600000
+ 539990 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  65i,12n,100p,10438b,2593s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Greeks.pdf (23 pages).
+Output written on Greeks.pdf (26 pages).

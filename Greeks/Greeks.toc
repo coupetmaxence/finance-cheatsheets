@@ -1,0 +1,21 @@
+\babel@toc {french}{}
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Greek letters}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Delta}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Gamma}{6}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Shadow gamma}{8}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Vega}{9}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Volga}{11}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Theta}{12}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Rho}{14}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.8}Omega}{15}{subsection.1.8}
+\contentsline {section}{\numberline {2}Other sensibilities}{16}{section.2}
+\contentsline {subsection}{\numberline {2.1}Volatility}{16}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Risk premium}{16}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Beta}{16}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Sharpe ratio}{16}{subsection.2.4}
+\contentsline {section}{\numberline {3}Numerical methods for greeks}{17}{section.3}
+\contentsline {subsection}{\numberline {3.1}Binomial tree}{17}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Monte-Carlo simulation}{19}{subsection.3.2}
+\contentsline {section}{\numberline {A}Greeks computation with binomial tree method}{20}{appendix.A}
+\contentsline {section}{\numberline {B}Greeks computation with Monte-Carlo method}{23}{appendix.B}

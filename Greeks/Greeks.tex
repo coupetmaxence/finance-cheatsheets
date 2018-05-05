@@ -181,6 +181,11 @@
 \renewcommand\headrulewidth{0pt}
 \lhead{}\chead{}\rhead{}
 \cfoot{\vspace*{6\baselineskip} \textcolor{white}{\thepage} \large}
+
+
+	\newpage
+	
+	\tableofcontents
 	\newpage
 
 	\pagenumbering{arabic}
@@ -194,13 +199,15 @@
 %																																	   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	Before we start with the computation of the several greeks, it is important to recal the Black-Scholes fomula for an european call and an european put paying no dividend.
-	Let $S_0$ be the underlying price at time $0$, let $r$ be the risk-free rate, let $\sigma$ be the volatility of the underlying, let $T$ be the maturity of the option and $K$ the strike price. We then have :
-	$$call(K, T) = S_0 N(d_1) - Ke^{rT}N(d_2)$$
-	$$put(K, T) =  Ke^{rT}N(-d_2) - S_0 N(-d_1)$$
+
+
+	Before we start with the computation of the several greeks, it is important to recal the Black-Scholes fomula for an european call and an european put.
+	Let $S_0$ be the underlying price at time $0$, let $r$ be the risk-free rate, let $\sigma$ be the volatility of the underlying, let $T$ be the maturity of the option, $K$ the strike price and $\delta$ the dividend rate. We then have :
+	$$call(K, T) = S_0 e^{-\delta T} N(d_1) - Ke^{rT}N(d_2)$$
+	$$put(K, T) =  Ke^{rT}N(-d_2) - S_0  e^{-\delta T} N(-d_1)$$
 	
 	with :
-	$$d_1=\frac{ln\left(\frac{S_0}{K}\right)+(r+\frac{\sigma^2}{2})T}{\sigma\sqrt{T}}$$
+	$$d_1=\frac{ln\left(\frac{S_0}{K}\right)+(r-\delta+\frac{\sigma^2}{2})T}{\sigma\sqrt{T}}$$
 	$$d_2=d_1 - \sigma\sqrt{T}$$
 	
 	
@@ -227,11 +234,13 @@
 	\newpage
 	\section{Greek letters}
 	
+	One important feature for greeks is to compute the greek of a portfolio. If the portfolio contains different options on the same underlying, the greeks of the portfolio is the sum of the greeks of each option in the portfolio.
+	
 	\subsection{Delta}
 	
 	The delta is the sensitivity of the option price with respect to changes in the underlying price. Therefore we can think of the delta as the slope of the price of the option with respect to the price of the underlying. One can show the following analytic formulas for calls and puts :
-	$$ \Delta_{call}= \frac{\partial c}{\partial S} = N(d_1)$$
-	$$ \Delta_{put}= \frac{\partial p}{\partial S} = N(d_1)-1$$
+	$$ \Delta_{call}= \frac{\partial c}{\partial S} = e^{-\delta T} N(d_1)$$
+	$$ \Delta_{put}= \frac{\partial p}{\partial S} =  e^{-\delta T}\left(N(d_1)-1\right)$$
 	
 	An alternative way to define the delta, is the amount of shares needed in order to completely hedge a short position in the option with respect to changes in the underlying price. With a short position in a call, we will have losses if the price of the underlying increase. Therefore we are looking to take profit of such an increase by taking a position on the underlying (just in order to hedge the position), and we will buy shares (forward could be used too). Thus the delta will always be positive for a call. The same thinking could be made for a put, and show that the delta of a put is always negative since we sell shares in order to hedge our short position. 
 	
@@ -271,7 +280,7 @@ When explaining the delta we gave a solution for performing a delta hedging : ta
 \subsection{Gamma}
 
 	We saw that the delta could have important variation when the strike price is close to the spot price, therefore we need to use the second derivative of the option price with respect to the underlying price (or the derivative of the delta with respect to the underlying price) in order to characterize those variations of delta. One can show that calls and puts have the same gamma and it is given by the following analytic formula :
-	$$ \Gamma= \frac{\partial^2 c}{\partial S^2} =\frac{\partial^2 p}{\partial S^2} = \frac{N'(d_1)}{S_0 \sigma \sqrt{T}}$$
+	$$ \Gamma= \frac{\partial^2 c}{\partial S^2} =\frac{\partial^2 p}{\partial S^2} = \frac{ e^{-\delta T}N'(d_1)}{S_0 \sigma \sqrt{T}}$$
 	
 	As we already discused in the section about delta, the delta only have important variation when the maturity is short and when the strike price is close to the spot price we could therefore anticipate the shape of the gamma in figure \ref{fig:gamma} and we can conclude that gamma hedging is only relevant for ATM options with relatively short maturity. 
 	
@@ -314,7 +323,7 @@ When explaining the delta we gave a solution for performing a delta hedging : ta
     \subsection{Vega}
     
     The vega (vega is not a real greek letter by the way) represents the sensitivity of an option price to changes in volatility. By volatility we mean implied volatility of the option (see this link for more precisions about implied volatility : \href{https://www.investopedia.com/terms/i/iv.asp}{link}). An increase in volatility means that the underlying price is more likely to have important variations and thus finishing in the money. The vega will therefore be positive for a long position in a call or a put. Moreover, this increase in volatility will have a greater impact on greater maturities since the volatility will be higher for a longer period and could lead to an option very in the money. One can show that calls and puts have the same vega and it is given by the following analytic formula :
-    $$\nu =\frac{\partial c}{\partial \sigma} =\frac{\partial p}{\partial \sigma}= S_0 \sqrt{T} N'(d_1)$$
+    $$\nu =\frac{\partial c}{\partial \sigma} =\frac{\partial p}{\partial \sigma}= S_0  e^{-\delta T} \sqrt{T} N'(d_1)$$
     
     Figure \ref{fig:vega} show the vega surface for calls and puts. The important feature is to keep in minde that the vega is an increasing function of time to maturity.
     
@@ -349,8 +358,8 @@ When explaining the delta we gave a solution for performing a delta hedging : ta
     \subsection{Theta}
     
     The theta represents the sensibility of the option price to a variation in time. We already discussed the relationship between gamma and theta. One can show that the analytic formula for theta is given by :
-    $$\theta_{call} = \frac{\partial c}{\partial t} = -\frac{S_0 \sigma N'(d_1)}{2\sqrt{T}} - rKe^{-rT}N(d_2)$$
-    $$\theta_{put} = \frac{\partial p}{\partial t} = -\frac{S_0 \sigma N'(d_1)}{2\sqrt{T}} + rKe^{-rT}N(-d_2)$$
+    $$\theta_{call} = \frac{\partial c}{\partial t} = -\frac{S_0 e^{-\delta T} \sigma N'(d_1)}{2\sqrt{T}} +\delta S_0 e^{-\delta T} N(d_1) - rKe^{-rT}N(d_2)$$
+    $$\theta_{put} = \frac{\partial p}{\partial t} = -\frac{S_0 e^{-\delta T} \sigma N'(d_1)}{2\sqrt{T}} -\delta S_0 e^{-\delta T} N(-d_1) + rKe^{-rT}N(-d_2)$$
     
     Figures \ref{fig:theta_call} and \ref{fig:theta_put} show the theta for calls and puts. It is interesting to note that an deep-OTM put may have a positive theta, which means that a long position in a deep-OTM put has more value as time passes. But generally, the theta of a long position in both call or put is negative, which mean that all things being equal, the option losses value as time passes. One should be aware of this ''time decay'' when entering in a long postion. One should also note the non-symetric feature of the theta with respect to the underlying price.
     
@@ -434,6 +443,32 @@ For a call, we will always have $\Omega \geq 1$ and for a put : $\Omega \leq 0$.
     
     The more an option is ITM, the more the option is likely to be exercized and thus the more the option looks like the underlying itself.  It is then logical to find that when an option tends to be deep ITM, the omega tends to be close to 1 since the underlying has an implicit leverage of 1.
     
+\newpage
+\section{Other sensibilities}
+\subsection{Volatility}
+
+Given the volatility of the underlying of an option and the option's elasticity, we can define the volatility of the option's price as follow :
+$$ \sigma_{option} = |\Omega| \times \sigma_{underlying} $$
+As we have seen in the previous section, the elasticity of an option can be quite important if the option is OTM. Thus it is not surprising to have volatilities of 300 \% or more for some options.
+
+\subsection{Risk premium}
+
+One can define the risk premium of an option with the risk premium of the underlying and the elasticity. Let $\gamma$ be the risk premium of the option, $\alpha$ the risk premium of the underlying, $r$ the risk-free rate and $\Omega$ the elasticity of the option. We then have :
+$$\gamma - r = (\alpha - r) \Omega $$
+$$\gamma = \alpha \Omega + r(1-\Omega)$$
+
+\subsection{Beta}
+
+Given the beta of the underlying and the option's elasticity, we can define the beta of an option as follow :
+$$\beta_{option} = \Omega \times \beta_{underlying} $$
+
+\subsection{Sharpe ratio}
+
+Let $\alpha$ be the risk premium of the underlying, $r$ the risk-free rate and $\sigma$ the underlying's volatility.
+The underlying's Sharpe ratio is defined as follow :
+$$\text{Sharpe ratio} = \frac{\alpha - r}{\sigma} $$
+
+According to the previous sections, the option's volatility is $|\Omega|\sigma$ and its risk premium is $\Omega (\alpha - r)$. So the Sharpe ratio of an option is equal to the Sharpe ratio of the underlying. This is because an option is just a leveraged position in the underlying, and the leverage does not change the Sharpe ratio.
 
 \newpage
 \section{Numerical methods for greeks}
